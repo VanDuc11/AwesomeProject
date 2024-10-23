@@ -1,11 +1,6 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
-interface CustomModalProps {
-    visible: boolean;
-    title: string;
-    children: React.ReactNode;
-}
 
 const CustomModal: React.FC<CustomModalProps> = ({ visible, title, children }) => {
     if (!visible) return null;
