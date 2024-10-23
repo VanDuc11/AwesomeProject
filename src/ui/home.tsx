@@ -6,8 +6,8 @@ import CustomModal from './CustomModal';
 
 function Home() {
     const [modalVisible, setModalVisible] = useState<boolean>(false);
-    const [productList, setProductList] = useState<product[]>([]);
-    const [productForm, setProductForm] = useState<product>({
+    const [productList, setProductList] = useState<Product[]>([]);
+    const [productForm, setProductForm] = useState<Product>({
         id: 0,
         name: '',
         price: 0,
@@ -36,7 +36,7 @@ function Home() {
             Alert.alert('Số lượng đã bán không được âm.');
             return;
         }
-        const newProduct: product = {
+        const newProduct: Product = {
             id: productList.length + 1,
             name: productForm?.name,
             image: productForm?.image,
